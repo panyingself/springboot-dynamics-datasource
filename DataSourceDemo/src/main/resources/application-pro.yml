@@ -1,0 +1,64 @@
+spring:
+    master:
+      url: jdbc:mysql://192.168.1.127:3306/pytest?useUnicode=true&characterEncoding=utf8
+      username: root
+      password: 123
+      type: com.alibaba.druid.pool.DruidDataSource
+      driver-class-name: com.mysql.jdbc.Driver
+      filters: stat
+      maxActive: 20
+      initialSize: 1
+      maxWait: 60000
+      minIdle: 1
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
+      validationQuery: select 'x'
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      poolPreparedStatements: true
+      maxOpenPreparedStatements: 20
+    slave:
+      url: jdbc:mysql://192.168.1.127:3306/pytestread?useUnicode=true&characterEncoding=utf8
+      username: root
+      password: 123
+      type: com.alibaba.druid.pool.DruidDataSource
+      driver-class-name: com.mysql.jdbc.Driver
+      filters: stat
+      maxActive: 20
+      initialSize: 1
+      maxWait: 60000
+      minIdle: 1
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
+      validationQuery: select 'x'
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      poolPreparedStatements: true
+      maxOpenPreparedStatements: 20
+
+
+
+
+#spring:
+#  application:
+#    name: py-service
+#  aop:
+#   proxy-target-class: true
+#   auto: true
+
+server:
+  port: 8080
+
+mybatis:
+  type-aliases-package: com.py.entity.*
+  mapper-locations: classpath:mapper/*/*.xml
+#logging
+logging:
+  level: warn
+
+
+
+
+
