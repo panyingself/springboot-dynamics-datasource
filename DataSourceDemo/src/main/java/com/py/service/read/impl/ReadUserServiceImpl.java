@@ -1,6 +1,7 @@
 package com.py.service.read.impl;
 
 import com.py.entity.User;
+import com.py.entity.export.DataInfo;
 import com.py.mapper.UserMapper;
 import com.py.service.read.ReadUserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,5 +30,10 @@ public class ReadUserServiceImpl implements ReadUserService {
     @Override
     public Object getAllUser() {
         return  userMapper.getAllUser();
+    }
+
+    @Override
+    public List<DataInfo> getExportDataList() {
+        return userMapper.getExportDataList();
     }
 }

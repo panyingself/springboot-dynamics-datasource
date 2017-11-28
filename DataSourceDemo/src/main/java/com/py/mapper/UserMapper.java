@@ -1,6 +1,7 @@
 package com.py.mapper;
 
 import com.py.entity.User;
+import com.py.entity.export.DataInfo;
 
 import java.util.List;
 
@@ -10,4 +11,6 @@ import java.util.List;
 public interface UserMapper {
     List<User> getAllUser();
     List<User> findAllUser();
+
+    List<DataInfo> getExportDataList();
 }

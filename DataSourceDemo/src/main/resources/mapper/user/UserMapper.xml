@@ -24,4 +24,10 @@
         user_name
         from t_user
     </select>
+
+    <select id="getExportDataList" resultType="com.py.entity.export.DataInfo" flushCache="true">
+        select
+        user_name as data0
+        from t_user
+    </select>
 </mapper>
